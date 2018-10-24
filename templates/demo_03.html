@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type ="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.ajax({
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        url: "demo_test_post",
+        data: JSON.stringify({title: 'hallo', article: 'test'}),
+        success: function (data) {
+            alert("Data: " + data + "\nStatus: " + status);
+            console.log("jjjjjjjjjj")
+        },
+        error: function(error) {
+                console.log(error);
+            },
+        dataType: "json"
+        });
+  });
+});
+</script>
+</head>
+<body>
+<button> 버튼을 누르세요!  </button>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.*.bak
+.idea
+*.pyc
+/venv_36/
+/migrations/
+/logs/
+.vscode/
