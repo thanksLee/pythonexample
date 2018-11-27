@@ -44,5 +44,30 @@ print(time.strftime('%c'), time.localtime(time.time()))
 
 for i in range(10):
     print(i)
-    time.sleep(1)
+    #time.sleep(1)
 
+import calendar
+
+print(calendar.calendar(2018))
+
+print("aaa : ", calendar.prmonth(2018, 12))
+
+print(calendar.weekday(2018, 7, 21))
+
+print(calendar.monthrange(2018, 12))
+
+import random
+
+print(random.random())
+
+print(random.randint(1, 10))
+
+print(random.randint(10, 50))
+
+def pop_list(data):
+    n = random.randint(0, len(data)-1)
+    return data.pop(n)
+
+if __name__ == "__main__":
+    data = [1, 3, 5, 7, 9]
+    while data : print(pop_list(data))
