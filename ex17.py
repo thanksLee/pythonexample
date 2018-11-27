@@ -59,4 +59,8 @@ shutil.copy("src.txt", "dst.txt")
 #glob
 import glob
 
-glog.blob()
+print(os.getcwd())
+
+aaa = glob.glob(os.getcwd() + '\\e*')
+
+print(aaa)
