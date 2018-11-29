@@ -521,3 +521,22 @@ print(test1.str)
   > 난수 발생 모듈
   > 난수 : 0.0 ~ 1.0 사이의 실수 값  
 ```
+18. 파이썬에서 제공하는 표준 자료 구조
+```
+- ex) ex19.py
+- 리스트, 튜플, 딕셔너리(사전), 셋(집합)
+  > collections 모듈
+    * deque(양쪽이 열려있는 큐구조), defaultdict, Counter, namedtuple, 
+      # Deque = 양방향 큐(데크)는 컨테이너 양쪽 (앞뒤)에 아이템을 넣거나 뺄수 있다.
+    orderedDict
+      # Counter : 컨테이너에 동일한 값의 자료가 몇개인지를 파악하는데 사용하는 객체
+      # Counter 객체는 산술/집합 연산이 가능하다.
+      # defaultdict 메서드는 컨테이너를 초기화 만들때 default 값을 지정한다.
+  > array 모듈
+    * array 사용하는 방법
+  > heapq 모듈 (힙생성, 힙내부자료 접근)
+  > bisect 모듈(정렬된 상태로 요소를 추가, 중복값 처리)
+  > queue
+  > struct
+  > copy
+```
