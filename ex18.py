@@ -71,3 +71,13 @@ def pop_list(data):
 if __name__ == "__main__":
     data = [1, 3, 5, 7, 9]
     while data : print(pop_list(data))
+
+
+from pprint import pprint
+data = [(1, {"a":"가", "b":"나", "c":"다", "d":"라"}), 
+        (2, {"e":"마", "f":"바", "g":"사", "h":"아"}), 
+        ]
+
+
+print(data)
+pprint(data)

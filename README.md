@@ -215,6 +215,8 @@
 - with문을 이용해서 파일 객체 다루기
   > with문을 이용하면 파일을 닫을 필요가 없다.
   > 자동으로 파일을 닫아준다.
+  > 파일을 오픈하여 제일 마지막까지 읽었으므로 다시 읽으려면 포인터를 제일 처음으로
+    읽으려면 seek() 함수를 이용하자
 - import를 이용한 모듈 입력 방법 (모듈 : 함수들과 변수들을 모아놓은것)
   > sys 모듈은 내장 모듈
 ```
@@ -520,10 +522,15 @@ print(test1.str)
 - random 모듈
   > 난수 발생 모듈
   > 난수 : 0.0 ~ 1.0 사이의 실수 값  
+
+- pprint(pretty printer) : 자료구조를 사람이 보기좋게 출력하는 모듈
+  > pprint모듈에 pprint() 함수를 이용하여 자료구조를 출력해 보기
+  > 복잡한 구조를 좀더 보기 좋게 표현
 ```
 18. 파이썬에서 제공하는 표준 자료 구조
 ```
-- ex) ex19.py
+- 참조 사이트 : docs.python.org/3/libary
+- ex) ex19.py, ex20.py
 - 리스트, 튜플, 딕셔너리(사전), 셋(집합)
   > collections 모듈
     * deque(양쪽이 열려있는 큐구조), defaultdict, Counter, namedtuple, 
@@ -534,7 +541,13 @@ print(test1.str)
       # defaultdict 메서드는 컨테이너를 초기화 만들때 default 값을 지정한다.
   > array 모듈
     * array 사용하는 방법
+    * sequence 자룍조를 정의하는데, list와의 차이점은 모든 자료형이 동일해야 한다.
+    * 참조 : https://docs.python.org/3/library/array.html
+    * array 의 내용을 파일에 쓰거나 읽기
   > heapq 모듈 (힙생성, 힙내부자료 접근)
+    * heap 이란 자식노드가 부모노드와 정렬관계를 가지는 트리형 자료 구조
+      max-heap : 위로갈수록 커지는 형태
+      min-heap : 아래로 갈수록 커지는 형태
   > bisect 모듈(정렬된 상태로 요소를 추가, 중복값 처리)
   > queue
   > struct

@@ -162,3 +162,55 @@ dic1["제주"] = "남양주"
 
 for i, j in dic1.items():
     print(i, j)
+
+
+import array
+from pprint import pprint
+
+str = "abcdefghijklmn"
+
+arr = array.array("u", str) # array(타입코드, 값) : https://docs.python.org/3/library/array.html
+
+print(arr)
+
+print(array.typecodes)
+
+arr1 = array.array("i", range(5))
+
+print(arr1)
+
+arr1.extend(range(5))
+
+print(arr1)
+
+print(arr1[3:6])
+
+print(list(enumerate(arr1)))
+print("================================")
+# array 의 내용을 파일에 쓰거나 읽기
+import binascii
+
+arr = array.array("i", range(5))
+
+print(arr)
+
+# tofile(파일객체) : 파일개체에 쓰는 함수
+
+f = open("test.txt", "w+b")
+
+arr.tofile(f)
+f.flush()
+
+with open("test.txt", "rb") as f1:
+    data = f1.read()
+    
+    # 아래 내용은 생략 가능. 주석처리함.
+    #print(binascii.hexlify(data))
+
+    # 파일을 오픈하여 제일 마지막까지 읽었으므로 다시 읽으려면 포인터를 제일 처음으로
+    # 읽으려면 seek() 함수를 이용하자
+    f1.seek(0)
+    arr2 = array.array("i")
+    arr2.fromfile(f1, len(arr))
+
+    print(arr2)
