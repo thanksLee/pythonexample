@@ -546,8 +546,17 @@ print(test1.str)
     * array 의 내용을 파일에 쓰거나 읽기
   > heapq 모듈 (힙생성, 힙내부자료 접근)
     * heap 이란 자식노드가 부모노드와 정렬관계를 가지는 트리형 자료 구조
-      max-heap : 위로갈수록 커지는 형태
-      min-heap : 아래로 갈수록 커지는 형태
+    * 이진힙의 경우 array나 list를 사용해서 표현할 수 있다. (인덱스를 이용해서 표시할 수 있다.)
+    * Heap은 최대 힙 (max-heap : 부모가 자식보다 크거나 같다)
+             최소 힙 (min-heap : 부모가 자식과 같거나 작다) 이 있다.
+            max-heap : 위로갈수록 커지는 형태
+            min-heap : 아래로 갈수록 커지는 형태
+    * 파이썬의 heapq모듈은 최소힙(min-heap) 으로 구현된모듈이다.
+    * 힙생성 : heappush() : 한개씩 가져와서 정렬, heapify() : 메모리 파일에서 정렬
+               heapify()가 성능이 더 좋다.
+    * heap data 접근 : heappop()을 이용하여 가장 작은 값을 하나씩 끄집어 낸다.
+    * heap data 교체 : heapreplace()
+    * 힙의 최대/최소 값 구하기 : nlargest(), nsmallest()
   > bisect 모듈(정렬된 상태로 요소를 추가, 중복값 처리)
   > queue
   > struct
