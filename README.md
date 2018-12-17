@@ -65,7 +65,7 @@
     > 리스트, 튜플의 차이점
       * 리스트는 [], 튜플은 () 를 사용한다.
       * 리스트는 요소의 변경(수정, 삭제, 생성)이 가능하지만, 튜플은 요소의 값을 변경할 수 없다.
-    
+
     사용예)
     tu = () --> 빈값이 들어 있는 형태
     tu2 = (1,)
@@ -100,7 +100,7 @@
 - 조건문, 반복문 : 프로그램의 흐름을 효율적으로 제어를 해서 효율적으로 이용하기 위한 명령문
 - 조건문 : if문
   > if문의 기본 구조
-    
+
     if <조건문>:
        <실행할 문장>
        <실행할 문장>
@@ -110,7 +110,7 @@
     else :
        <실행할 문장>
        <실행할 문장>
-   
+
   > indentation(들여쓰기)
     : if문을 작성할때 들여쓰기를 해야 한다.
   > if <조건문> 다음에 반드시 ":" 와야 한다.
@@ -122,12 +122,12 @@
   >   !=  :  x != y --- x와 y는 서로 다르다
   >   >= : x >= y ----- x는 y보다 크거나 같다.
   >   <= : x <= y ---- x는 y보다 작거나 같다.
-- 논리 연산자 (and, or, not)  
+- 논리 연산자 (and, or, not)
   > x and y : x와 y가 모두 참일때 참
   > x or y : x와 y 둘중에 하나만 참일때 참
   > not x : x가 참이면 거짓
 - in 연산자
-  > x in 리스트, x not in 리스트, x in 튜플, x not in 튜플, x in 문자열, x not in 문자열  
+  > x in 리스트, x not in 리스트, x in 튜플, x not in 튜플, x in 문자열, x not in 문자열
 
 - 반복문 : while, for 문
 ```
@@ -142,7 +142,7 @@
   > while 1:
       <실행할 명령문 1>
       <실행할 명령문 2>
-- 보조 제어문 (break, continue)      
+- 보조 제어문 (break, continue)
 - for 문의 구조
   > for 변수 in 리스트(튜플, 문자열):
       <실행할 명령문 1>
@@ -207,7 +207,7 @@
     파이썬은 프로그램 종료시 열린 파일을 객체들을 자동으로 닫아준다.
     쓰기 모드로 열었던 파일을 닫지 않고 재사용하는 경우에는 에러가 발생하기 때문에 닫아주는 습관을 갖자.
 - 파일을 읽어오는 방법
-  > readline() : 파일 객체에서 사용할 수 있는 readline() 이용하기    
+  > readline() : 파일 객체에서 사용할 수 있는 readline() 이용하기
     * 더이상 파일에서 읽어올 라인이 없을 경우 None
   > readlines() : 리스트로 리턴
   > read() : 파일 내용 전체를 문자열 형태로 리턴
@@ -240,7 +240,7 @@
 - 특정 key삭제 (del aa[3])
 - 특정값 가져오기 : bb.get("age")
   key 값이 없다면 None를 리턴
-- 딕셔너리내에 키값이 없을 경우 디폴트 값을 주는 방법 
+- 딕셔너리내에 키값이 없을 경우 디폴트 값을 주는 방법
   > get("gender", "default값")
 - pop() 함수를 이용하여  value값을 가져오기
   > 가져온 값을 원래의 값에서 제거한후 가져온다.(copy, cut 중에 cut)
@@ -262,7 +262,7 @@
 - 교집합, 합집합, 차집합을 이용하자.
 - 대칭 차집합(^) : 두개의 집합이 있을때 둘 중 한 집합에만 있는 항목들
 ```
-11. 클래스 
+11. 클래스
 
 - 클래스의 기초
 ```
@@ -433,7 +433,7 @@ print(test1.str)
     * os.rename(src, dst) : src 이름의 파일을 dst 이름으로 변경
 - shutil : 파일을 복사해주는 모듈
   > shutil.copy(src, dst)
-  >  src 이름으로                                                                                  
+  >  src 이름으로
 - glob 모듈
   > 디렉토리에 있는 파일들을 리스트로 만들때 사용한다.
 
@@ -449,7 +449,7 @@ print(test1.str)
     * b : 바이너리 모드로 파일 열기
       w+, r+, a+ 파일을 업데잍 할 용도로 사용
       b는 w, r, a 뒤에 붙여서 사용한다.
-      
+
       r : 단지 읽기 위해서 사용하는 모드, 포인터 위치는 파일 처음에 위치한다.
       r+ : 읽기와 쓰기 모드로 파일을 연다. 포인터 위치는 파일 처음에 위치한다.
 
@@ -521,7 +521,7 @@ print(test1.str)
 
 - random 모듈
   > 난수 발생 모듈
-  > 난수 : 0.0 ~ 1.0 사이의 실수 값  
+  > 난수 : 0.0 ~ 1.0 사이의 실수 값
 
 - pprint(pretty printer) : 자료구조를 사람이 보기좋게 출력하는 모듈
   > pprint모듈에 pprint() 함수를 이용하여 자료구조를 출력해 보기
@@ -530,10 +530,10 @@ print(test1.str)
 18. 파이썬에서 제공하는 표준 자료 구조
 ```
 - 참조 사이트 : docs.python.org/3/libary
-- ex) ex19.py, ex20.py
+- ex) ex19.py, ex20.py, ex21.py, ex22.py, ex24.py
 - 리스트, 튜플, 딕셔너리(사전), 셋(집합)
   > collections 모듈
-    * deque(양쪽이 열려있는 큐구조), defaultdict, Counter, namedtuple, 
+    * deque(양쪽이 열려있는 큐구조), defaultdict, Counter, namedtuple,
       # Deque = 양방향 큐(데크)는 컨테이너 양쪽 (앞뒤)에 아이템을 넣거나 뺄수 있다.
     orderedDict
       # Counter : 컨테이너에 동일한 값의 자료가 몇개인지를 파악하는데 사용하는 객체
@@ -557,8 +557,39 @@ print(test1.str)
     * heap data 접근 : heappop()을 이용하여 가장 작은 값을 하나씩 끄집어 낸다.
     * heap data 교체 : heapreplace()
     * 힙의 최대/최소 값 구하기 : nlargest(), nsmallest()
+    * 리스트의 개수가 적을때 유리, 많으면 불리
   > bisect 모듈(정렬된 상태로 요소를 추가, 중복값 처리)
+    * 정렬된 상태로 아이템(데이터)를 추가할 수 있는 모듈
+      데이터가 많은 리스트를 사용할 경우 힙방식보다 시간과 메모리 낭비를 줄일 수 있다.
+    * insort 는 오른쪽에서 정렬(insort = insort_right)
   > queue
+    * FIFO : First In First Out
+    * LIFO : Last In First Out (Stack)
+    * PUT : 데이터 삽입
+    * GET : 데이터 가져오기
+    * 우선 순위 큐 구현 (우선순위에 따라 아이켐을 정렬하고, 우선순위가 가장 높은 아이템을 팝하는 큐를 의미)
+    * queue.PriorityQueue 이 클래스를 이용하면 우선순위 큐를 구현가능 (쓰레드의 개념을 익힌후 사용)
+    * heapq 모듈을 응용해서 우선순위를 큐에 구현한다.
+  > deque (ex24.py)
+    * 자료구조 응용
+      - Deque를 이용해서 고정크기의 큐를 생성하기 (maxlen = n)
+      - maxlen의 크기보다 더 입력을 하면 마지막을 기준으로 없애도 새로 추가
+
   > struct
   > copy
+  > generator / yield
+    * yield의 리턴값이 generator object
+    * yield는 generator 생성을 하고 generator는 next() 함수를 가지고 있다.
+```
+19. unpacking
+```
+- 예제) ex23.py
+```
+20. Dictionary
+```
+- 예) ex25.py
+- dictionary key를 여러값에 매핑하기 (collections.defaultdict)
+- dictionary에서 최대/최소/정령
+  > zip() 함수를 이요해서 키(key) 와 값(value)를 뒤집는다.
+  > 한번 zip() 함수를 이용하고 다시 이용하려면 set을 다시 해줘야 한다.
 ```
