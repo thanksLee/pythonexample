@@ -113,3 +113,67 @@ fruits1 = {"사과":300, "오렌지":300}
 
 #value가 동일값인 경우 key를 가지고 비교한다.
 print(min(zip(fruits1.values(), fruits1.keys())))
+
+
+print ("두개의 딕셔너리에서 동일 값, 동일 키를 얻어오기")
+print()
+
+
+x = {
+    "a": 100,
+    "b": 200,
+    "c": 300
+}
+
+y = {
+    "c": 150,
+    "b": 200,
+    "a": 120
+}
+
+
+xy = x.keys() & y.keys()
+
+print(xy)
+
+xy = x.keys() - y.keys()
+
+print(xy)
+
+# 키(key)와 값(value)이 동일한 아이템을 찾기
+x_y = x.items() & y.items()
+
+print(x_y)
+
+z = {key:x[key] for key in x.keys() - {"b", "c"}}
+
+print(z)
+
+z = {key:y[key] for key in y.keys() - {"b", "c"}}
+
+print(z)
+
+print()
+print()
+print("시퀀스이 중복 없애기")
+
+aa = [8, 7, 0, 3, 5, 9, 1, 2, 3, 1, 5, 6, 4, 1, 5, 9]
+
+bb = set(aa)
+
+print(bb)
+
+print()
+print()
+print()
+print("시퀀스의 순서를 유지하면서 중복 없애기")
+
+def remove_dup(items):
+    set_a = set()
+    for item in items:
+        if item not in set_a:
+            yield item
+            set_a.add(item)
+
+jj = remove_dup(aa)
+print(list(jj))

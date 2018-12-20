@@ -580,6 +580,7 @@ print(test1.str)
   > generator / yield
     * yield의 리턴값이 generator object
     * yield는 generator 생성을 하고 generator는 next() 함수를 가지고 있다.
+    * yield는 iterator 성격을 갖고 있다.
 ```
 19. unpacking
 ```
@@ -592,4 +593,63 @@ print(test1.str)
 - dictionary에서 최대/최소/정령
   > zip() 함수를 이요해서 키(key) 와 값(value)를 뒤집는다.
   > 한번 zip() 함수를 이용하고 다시 이용하려면 set을 다시 해줘야 한다.
+- 두개의 딕셔너리에서 동일 값, 동일 키를 얻어오기
+- set은 중복값이 없다.
+- set은 순서가 없다.
+```
+21. 슬라이스
+```
+- ex) ex26.py
+- 슬라이스 name 설정하기
+```
+22. 데이터베이스 자료를 딕셔너리에 저장 후 정렬 시키는 방법
+```
+- ex) ex27.pys
+```
+23. 필터링
+```
+- ex) ex28.py
+- filter() 이용 : filter() 함수는 iterator를 생성할 수 있다. 즉 리스트로 생성
+- 필터링은 조건에 만족하는 겂만 걸러내기도 하고, 새로운 값으로 치환할 수 있다.
+- itertools.compress() : 어떤 시퀀스의 필터링 결과를 다른 시퀀스에 적용할 때 사용한다. (boolean 값으로 리턴된다.)
+```
+24. Comprehension
+```
+- ex29.py
+- 종류
+  > comprehension : list comprehension, Dictionary comprehension, set comprehension
+    * list comprehension : 리스트의 각각의 아이템(원소, 요소)에 어떤 함수를 적용한 후에 그 결과를 받아 새로운 리스트로 만들어 주는 기능
+      - 오른쪽에서 해석하는게 좋다.
+      [item*3 for item in aa_li]
+
+      aa_li는 어떤 함수를 적용하려는 대상(리스트)
+      for ~ 문은 현재 이 리스트 comprehension이 처리핳는 방식을 의미
+      : aa_li 내부를 순회하면서 각 아이켐을 임시변수(item)에 저장
+      이 저장된 임시변수를 대상으로 함수(item*3)를 적용한 후 그 결과를 리스트에 추가(append)한다.
+      리스트 comprehension의 결과 값으로 새로운 리스트를 반환한다.
+      원래 있던 aa_li는 변경하지 않는다.
+
+      원하는 아이템을 뽑아내고자 할 경우에 리스트 컴프리헨션 뒤에 if문을 사용할 수 있다.
+
+```
+25. Namedtuple
+```
+- ex) ex29.py
+- collections.namedtuple() : 튜플 객체에 이름을 설정하는 함수
+- dict 보다 메모리를 덜 사용한다.
+  즉, dict는 key:value로 저장이 되기 때문에 메모리 사용량이 증가한다.
+  하지만 namedtuple은 key 한개, value가 저장이 되기때문에 메모리 사용량이 감소한다.
+- namedtuple은 수정이 안된다. 따라서 nametuple을 수정하기 위해서는 _replace() 메소드를 사용해야 한다.
+- 파라미터 앞에 *, ** 의 의미
+  > *args : 파라미터를 몇개를 사용핳 지 모르는 경우
+  > **args : 딕셔너리 형태의 파라미터의 개수를 모르는 경우
+```
+26. ChainMap
+```
+- ex) ex30.py
+- 여러개의 딕셔너리(매핑데이터)가 있을때 하나의 딕셔너리로 합쳐서 검색을 할때 사용한다.
+- 찾는 순서는 첫번째 매핑 데이터에서 검색한 후에 그 다음 매핑 데이터에서 검색한다.
+- 중복키가 있으면 첫번째 값을 사용한다.
+- 데이터를 추가하거나 삭제할 경우 항상 첫번째 매핑데이터에만 영향을 준다.
+- ChainMap 과 비슷한 기능을 하는 update() 함수가 있다.
 ```
